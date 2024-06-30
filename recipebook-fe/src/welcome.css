@@ -1,0 +1,46 @@
+.welcome-wrap{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.welcome-img{
+    width: 40vw;
+    height: 80vh;
+    border: 1px red solid;
+    background-color: rgb(203, 203, 203);
+    border-radius: 30px;
+}
+
+.welcome-text{
+    width: 40vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome-chef{
+    width: 7vw;
+    height: 7vw;
+    border: 1px red solid;
+}
+
+.welcome-title{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    text-align: center;
+    
+}
+
+.welcome-recipe{
+    margin-bottom: 0;
+}
+
+.welcome-discover{
+    margin-top: 0;
+}
