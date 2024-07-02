@@ -1,0 +1,18 @@
+.content-wrap{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.filters-wrap{
+    width: 20vw;
+    height: 100vh;
+    margin-top: 15vh;
+    background-color: pink;
+}
+
+.recipes-wrap{
+    width: 80vw;
+    margin-top: 10vh;
+}

@@ -1,17 +1,27 @@
 import './navbar.css'
+import { Link } from "react-router-dom";
 
-function Navbar(){
+
+export function TopNavbar(){
     return(
-        <div className='navbar-wrap'>
-            <div className='logo'>recipebook</div>
+        <nav className='navbar-wrap' id='nav'>
+            <Link to='/' className='logo'>recipebook</Link>
             <div className='menu'>
-                <div>Cusine</div>
-                <div>Diet</div>
+                <div className='menu-item'>
+                    <Link to='/' className='navbar-link'>Cusine</Link>
+                </div>
+                <div className='menu-item'>
+                    <Link to='/' className='navbar-link'>Diet</Link>
+                </div>
             </div>
             <div className='searchbar'>
-                <div className='input'></div>
-                <button className='search'>search</button>
+                <input 
+                    className='searchbar-input'
+                    type='text'
+                    placeholder='Search for recepies'>
+                </input>
+                <button className='button-search'>Search</button>
             </div>
-        </div>
+        </nav>
     )
 }

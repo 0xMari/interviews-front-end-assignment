@@ -1,0 +1,83 @@
+.footer-wrap{
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vh;
+}
+
+.newsletter-wrap{
+    height: 30vh;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.newsletter-title{
+    font-size: 2rem;
+    width: 40%;
+    text-align: center;
+}
+
+.input-box{
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.newsletter-input{
+    width: 90%;
+    padding: 10px 10px;
+    border-radius: 40px;
+    border: none;
+    margin-right: 1vw;
+}
+
+.footer-vero{
+    height: 40vh;
+    background-color: #FA4848;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 5vh;
+}
+
+.brand-details{
+    width: 20vw;
+    margin-left: 2vw;
+}
+
+.branding{
+    font-size: 1.6rem;
+    font-weight: bolder;
+}
+
+.lorem{
+    font-weight: 200;
+    text-align: justify;
+    padding-top: 5vh;
+}
+
+.footer-section{
+    display: flex;
+    flex-direction: column;
+}
+
+.last-section{
+    margin-right: 20vw;
+}
+.section-title{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.section-list{
+    list-style-type: none;
+}
+
+.section-list>li{
+    padding-top: 2vh;
+}

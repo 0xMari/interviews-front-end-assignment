@@ -1,5 +1,7 @@
 import './welcome.css'
 
+import { Link } from 'react-router-dom';
+
 function Welcome(){
     return(
         <div className='welcome-wrap'>
@@ -12,7 +14,9 @@ function Welcome(){
                     <h1 className='welcome-recipe'>RecipeBook</h1>
                     <h3 className='welcome-discover'>Discover Recipes</h3>
                 </div>
-                <button className='welcome-button'>Explore</button>
+                <Link to='/home'>
+                    <button className='welcome-button'>Explore</button>
+                </Link>
                 
             </div>
 
