@@ -1,6 +1,7 @@
 import './landing.css'
 import {TopNavbar} from './navbar'
 import {Recipes} from './recipe-card'
+import { CoolSearch } from './cool-search'
 import Footer from './footer'
 
 import { Link } from 'react-router-dom';
@@ -40,6 +41,7 @@ export default function Landing(){
         <>
             <TopNavbar />
             <Hero />
+            <CoolSearch />
             <Recipes />
             <Footer />
         </>

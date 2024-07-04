@@ -1,12 +1,12 @@
 import './recipe-card.css'
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import Marquee from 'react-fast-marquee';
 
 
-function RecipeBox({name, cuisine, diet, difficulty, image}){
+function RecipeBox({id, button, name, cuisine, diet, difficulty, image}){
     return(
         <>
-        <div className='recipe-wrap'>
+        <div className='recipe-wrap' id={id}>
             <img className='recipe-img' src={image} alt={image}></img>
             <div className='recipe-details'>
                 <div className='recipe-title'>{name}</div>
@@ -18,7 +18,7 @@ function RecipeBox({name, cuisine, diet, difficulty, image}){
             </div>
             <div className='recipe-details2'>
                 <div className='recipe-rating'>Rating</div>
-                <button className='button-details'>View details</button>
+                <button className='button-details' id={button}>View details</button>
             </div>
         </div>
         </>
@@ -35,9 +35,8 @@ export function Recipes(){
 
     const [isLoading, setIsLoading] = useState(false);
     const [visibleData, setVisibleData] = useState([]);
-    const [page, setPage] = useState(0);
 
-
+    const servUrl = 'http://localhost:8080'
 
     useEffect(() => {
         setIsLoading(true);
@@ -79,7 +78,7 @@ export function Recipes(){
 
                 setDifficulty(difficultyMap);
                 
-                setVisibleData(recipes.slice(0, 5));
+                setVisibleData(recipes.slice(0, 3));
 
             } catch(error){
                 console.error('data fetching error', error);
@@ -91,25 +90,39 @@ export function Recipes(){
 
     }, []);
 
-    // const handleShowMore = () => {
-    //     const newPage = page + 1;
-    //     const newVisibleData = recipes.slice(0, 5 + newPage * 10);
-    //     setVisibleData(newVisibleData);
-    //     setPage(newPage);
-    // };
+    const cards = ['1', '2', '3', '4'];
+    const [currentIndex, setCurrentIndex] = useState(0)
 
+    const carouselInfScroll = () => {
+        if (currentIndex == cards.length-1) {
+            return setCurrentIndex(0)
+        }
+        return setCurrentIndex(currentIndex+1)
+    }
+
+    useEffect(() => {
+        const interval = setInterval(() =>{carouselInfScroll()}, 3000)
+
+        return () => clearInterval(interval)
+    })
 
     return(
-        <div className='recipesCard-wrap'>
+        <div className='recipesCard-wrap carousel'>
+            <h2>Popular dishes</h2>
             {isLoading ? <p>Loading...</p> : null}
+            <Marquee pauseOnHover autoFill speed='100'className='marq'>
             {visibleData.map((recipe) => (
                 <RecipeBox 
+                    id='carousel-item'
+                    button = 'carousel-item-button'
                     name={recipe.name}
                     cuisine={cuisine[recipe.cuisineId]}
                     diet={diet[recipe.dietId]}
                     difficulty={difficulty[recipe.difficultyId]}
-                    image={recipe.image}/>
+                    image={servUrl+recipe.image}/>
             ))}
+            </Marquee>
+            
         </div>
     )
 }
@@ -125,6 +138,8 @@ export function RecipesExplore(){
     const [isLoading, setIsLoading] = useState(false);
     const [visibleData, setVisibleData] = useState([]);
     const [page, setPage] = useState(0);
+
+    const servUrl = 'http://localhost:8080'
 
 
 
@@ -197,7 +212,7 @@ export function RecipesExplore(){
                     cuisine={cuisine[recipe.cuisineId]}
                     diet={diet[recipe.dietId]}
                     difficulty={difficulty[recipe.difficultyId]}
-                    image={recipe.image}/>
+                    image={servUrl+recipe.image}/>
             ))}
             {visibleData.length < recipes.length && (
                 <button onClick={handleShowMore}>Show More</button>

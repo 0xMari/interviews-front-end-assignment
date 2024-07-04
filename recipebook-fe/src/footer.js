@@ -35,7 +35,7 @@ export default function Footer(){
                 <div className='footer-section'>
                     <div className='section-title'>Quick links</div>
                     <div className='section-list'>
-                        <li><Link>Recipes</Link></li>
+                        <li>Recipes</li>
                         <li>About us</li>
                         <li>FAQ</li>
                     </div>
