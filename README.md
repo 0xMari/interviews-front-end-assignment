@@ -78,7 +78,7 @@ Inside the [server](./server) directory there is a simple server that you can us
 read the instruction to setup it in the [server README](./server/README.md), you should find all the api endpoints that
 you need to complete the challenges.
 
-#### Challenge #1: Recipe List
+#### Challenge #1: Recipe List ✅
 
 Create the first RecipeBook page: the recipe list! Each recipe have a name, a photo, a list of ingredients
 and many more details that you can find in the data model. Consider to avoid to show all the recipes at once to reduce
@@ -86,18 +86,31 @@ the browser load.
 
 #### Challenge #2: Search and Filter
 
-Add a search bar and a list of filters based on cuisine, difficulty and dietary preferences (e.g., vegetarian, gluten-free).
+Add a search bar(❌) and a list of filters (✅) based on cuisine, difficulty and dietary preferences (e.g., vegetarian, gluten-free).
 
-### Challenge #3: Add a Recipe
+### Challenge #3: Add a Recipe ✅
 
 Design a form that allows users to add new recipes by providing details such as the recipe name, ingredients,
 instructions, cuisine type, and dietary preference and an image.
 
 ### Challenge #4: Recipe Details and Comments
 Develop a recipe details page where users can view the full recipe, including ingredients, instructions, and user
-comments. Enable users to add comments and rate the recipe, displaying the average rating and updating the list of
-comments.
+comments (✅) . Enable users to add comments and rate the recipe, displaying the average rating and updating the list of
+comments (❌).
 
 ## How to run
 
-...
+Install the project dependencies:
+
+```bash
+npm install
+```
+
+In the project directory, you can run:
+
+```bash
+npm start
+```
+
+Runs the app in the development mode.
+Open http://localhost:3000 to view it in your browser.
