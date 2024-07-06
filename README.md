@@ -100,7 +100,7 @@ comments (❌).
 
 ## How to run
 
-Install the project dependencies:
+In the project directory install the project dependencies:
 
 ```bash
 npm install
