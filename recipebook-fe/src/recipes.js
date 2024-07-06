@@ -10,15 +10,12 @@ export default function RecipePage(){
         <>
         <TopNavbar />
         <div className='content-wrap'>
-            <div className='filters-wrap'>
-                filtri
-            </div>
-            <div className='recipes-wrap'>
+            
                 <RecipesExplore />
-            </div>
         </div>
         
         <Footer />
         </>
     )
 }
+

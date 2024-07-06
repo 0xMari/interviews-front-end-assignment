@@ -1,6 +1,7 @@
 import './cool-search.css'
 
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 const TypewriterPlaceholderInput = ({ words }) => {
@@ -8,6 +9,7 @@ const TypewriterPlaceholderInput = ({ words }) => {
   const [wordIndex, setWordIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [deleting, setDeleting] = useState(false);
+  const navigate = useNavigate()
 
   useEffect(() => {
     const handleTyping = () => {
@@ -35,11 +37,17 @@ const TypewriterPlaceholderInput = ({ words }) => {
     return () => clearTimeout(typingTimeout);
   }, [charIndex, deleting, wordIndex, words]);
 
+  const handleRedirect = (e) =>{
+    if(e.keyCode === 13)
+    navigate('/recipes')
+  }
+
   return (
     <input
         className='cool-input'
         type="text"
         placeholder={placeholder}
+        onKeyDownCapture={(e) =>handleRedirect(e)}
     />
   );
 };

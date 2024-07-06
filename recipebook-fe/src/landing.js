@@ -1,6 +1,6 @@
 import './landing.css'
 import {TopNavbar} from './navbar'
-import {Recipes} from './recipe-card'
+import {RecipesHome} from './recipe-card'
 import { CoolSearch } from './cool-search'
 import Footer from './footer'
 
@@ -42,7 +42,7 @@ export default function Landing(){
             <TopNavbar />
             <Hero />
             <CoolSearch />
-            <Recipes />
+            <RecipesHome />
             <Footer />
         </>
     )

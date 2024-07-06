@@ -1,6 +1,7 @@
-.recipesCard-wrap{
+.recipesCard-wrap-home{
     /* width: 100vw; */
     margin-top: 10vh;
+    margin-right: 2vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,15 +10,16 @@
 .carousel{
     flex-direction: column;
     align-items: flex-start;
+    height: 70vh;
 }
 
 .carousel>h2{
     padding-left: 2vw;
     font-size: 2.5rem;
 }
-.marq{
+/* .marq{
     z-index: -1;
-}
+} */
 #carousel-item{
     min-width: 50vw;
     max-width: 50vw;
@@ -76,6 +78,189 @@
     margin-right: 5vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: flex-end;
+}
+
+.results-wrap{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.results-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.recipesCard-wrap{
+    /* width: 100vw; */
+    margin-top: 10vh;
+    margin-right: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70vw;
+}
+
+.sort-wrap{
+    width: 15vw;
+    margin-right: 2vw;
+    align-self: flex-end;
+    padding: 10px 30px;
+    border-radius: 30px;
+    appearance: none;
+    /*ph--caret-down-light*/
+    background-image: url("../public/ph--caret-down-light.svg");
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 8px) center;
+}
+
+.filters-wrap{
+    width: 20vw;
+    height: fit-content;
+    border: 1px solid #807d7d;
+    /* padding: 2rem 4rem; */
+    border-radius: 30px;
+    margin-left: 2vw;
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.filter-first-title{
+    font-size: 1.5rem;
+    margin-top: 2vh;
+}
+.filter-title{
+    font-size: 1.2rem;
+    margin-bottom: 2vh;
+    border-bottom: 1px solid #807d7d;
+}
+
+.filter-section{
+    margin-top: 3vh;
+    padding-top: 1vh;
+}
+
+.filter-section:last-child{
+    margin-bottom: 10vh;
+}
+
+.filter-element{
+    list-style: none;
+}
+
+.filter-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 2vh 0;
+}
+
+.button-item{
+    padding: 10px 30px;
+    font-size: 1rem;
+}
+
+#reset{
+    color:#f94848;
+    background-color: transparent;
+    border: 1px solid #f94848;
+}
+/* .but-wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 2vh 2vw;
+}
+
+#add{
+    color:#f94848;
+    background-color: transparent;
+    border: 1px solid #f94848;
+    padding: 7px 20px;
+    
+} */
+
+@media (min-width: 768px) and (max-width: 1024px){
+    
+    .recipe-wrap{
+        width: 50vw;
+    }
+    
+    #carousel-item, .recipe-wrap{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 50vh;
+    }
+    
+
+    #carousel-item>img, .recipe-img{
+        width: 200px;
+        height: 200px;
+        margin: 0;
+        margin-top: 5vh;
+        object-fit: cover;
+        
+    }
+    .button-details{
+        width: 30vw;
+        margin-bottom: 7vh;
+    }
+
+    #carousel-item-button{
+        width: 20vw;
+        margin-bottom: 50px;
+        align-self: center;
+    }
+    
+} 
+
+@media (min-width: 320px) and (max-width: 767px){
+    
+    .recipe-wrap{
+        width: 50vw;
+    }
+    
+    #carousel-item, .recipe-wrap{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 50vh;
+    }
+    .recipe-img{
+        margin-top: 3vh;
+        width: 120px;
+    }
+
+    #carousel-item>img{
+        width: 100px;
+        height: 100px;
+        margin: 0;
+        margin-top: 5vh;
+        object-fit: cover;
+        
+    }
+    .recipe-title{
+        font-size: 1rem;
+    }
+    .recipe-tags, .recipe-diff{
+        font-size: 0.8rem;
+    }
+    
+    .button-details{
+        width: 30vw;
+        margin-bottom: 5vh;
+    }
+
+    #carousel-item-button{
+        width: 30vw;
+        margin-bottom: 50px;
+        align-self: center;
+    }
 }

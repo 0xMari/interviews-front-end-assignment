@@ -5,11 +5,14 @@
     flex-direction: row;
     justify-content: space-between;
     padding-top: 2vh;
-    border: 1px blue solid;
     align-items: center;
     position: fixed;
-    top:0
+    top:0;
+    z-index: 10;
 
+}
+#nav{
+    background-color: #ffffff00;
 }
 
 .scrolled{
@@ -21,7 +24,6 @@
     padding-left: 2vw;
     font-weight: bolder;
     font-size: 1.6rem;
-    border: 1px red solid;
     text-decoration: none;
     color: #0f0f0f;
 }
@@ -30,7 +32,6 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    border: 1px green solid;
     width: 50vw;
 }
 
@@ -54,3 +55,11 @@
     padding: 10px 15px;
 }
 
+#add{
+    color:#f94848;
+    background-color: transparent;
+    border: 1px solid #f94848;
+    padding: 10px 15px;
+    margin-left: 2vw;
+    
+}

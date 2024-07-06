@@ -5,11 +5,9 @@ import { Link } from 'react-router-dom';
 function Welcome(){
     return(
         <div className='welcome-wrap'>
-            <div className='welcome-img'>
-
-            </div>
+            <img src='../odiseo-castrejon-1SPu0KT-Ejg-unsplash.jpg' className='welcome-img'/>
             <div className='welcome-text'>
-                <div className='welcome-chef'/>
+                <img src='../chef-hat_1186963.png' className='welcome-chef'/>
                 <div className='welcome-title'>
                     <h1 className='welcome-recipe'>RecipeBook</h1>
                     <h3 className='welcome-discover'>Discover Recipes</h3>
