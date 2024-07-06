@@ -1,0 +1,149 @@
+.addRec-wrap{
+    width: 80vw;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    border: 1px #838383 solid;
+    border-radius: 40px;
+    align-items: center;
+    margin: auto;
+    margin-top: 15vh;
+    padding-bottom: 10vh;
+    box-shadow: 10px 10px 5px rgb(0 0 0 / 0.4);
+}
+.addRec-title{
+    margin-top: 5vh;
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+.addRec-name{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2vw;
+}
+.addRec-name>input{
+    height: 40px;
+    width: 200px;
+    border-radius: 30px;
+    border: 1px solid #838383;
+    padding-left: 2rem;
+    margin-right: 1vw;
+}
+.addRec-ingredients{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.cat-header{
+    margin-top: 5vh;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #f94848
+}
+
+.ingr-list{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 2vw;
+    /* margin: 0 10vw; */
+    margin-top: 2vh ;
+}
+.dlt-btn{
+    color:#f94848;
+    background-color: transparent;
+    border: 1px solid #f94848;
+    padding: 5px 10px;
+}
+
+.add-btn{
+    border: 1px solid #838383;
+    background-color: transparent;
+    color:#0f0f0f;
+    padding: 3px 16px;
+}
+.add-btn:hover{
+    border: 1px solid #f94848;
+    color: #f94848;
+}
+
+.ingr-item{
+    height: 40px;
+    width: 200px;
+    border-radius: 30px;
+    border: 1px solid #838383;
+    padding-left: 2rem;
+    margin-right: 1vw;
+    
+}
+
+.addRec-inst{
+    display: flex;
+    flex-direction: column;
+}
+
+.inst-text{
+    margin-top: 2vh;
+    width: 60vw;
+    min-height: 20vh;
+    border: 1px solid #838383;
+    border-radius: 30px;
+    padding: 20px 30px;
+}
+
+.addRec-sel{
+    display: flex;
+    flex-direction: column;
+}
+
+.addRec-sel>select{
+    width: 64vw;
+    height: 5vh;
+    border: 1px solid #838383;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-top: 2vh;
+}
+
+.custom-upl{
+    cursor: pointer;
+    border: 1px solid #838383;
+    border-radius: 30px;
+    padding: 10px 30px;
+    margin-top: 2vh;
+}
+.custom-upl:hover{
+    border: 1px solid #f94848;
+    color: #f94848;
+
+}
+.custom-upl>input{
+    display: none;
+}
+
+#img-add{
+    margin-bottom: 5vh;
+}
+
+.sbm-btn{
+    margin-top: 5vh;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px){
+    .sbm-btn{
+        justify-content: center;
+        margin-top: 10vh;
+    }
+    
+} 
+
+@media (min-width: 320px) and (max-width: 767px){
+    .sbm-btn{
+        justify-content: center;
+        margin-top: 10vh;
+    }
+}
